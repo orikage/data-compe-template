@@ -1,0 +1,12 @@
+version: "3"
+services:
+  jupyter:
+    build: .
+    tty: true
+    #command: "/bin/sh -c \"while sleep 1000; do :; done\""
+    command: sleep infinity
+    volumes:
+      - C:\Makefiles\data-compedition\MAIN\working:/tmp/working
+    ports:
+      - 8888:8888
+    #command: jupyter notebook --ip=0.0.0.0 --allow-root --no-browser
